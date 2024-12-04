@@ -133,7 +133,7 @@ Contributions are welcome! Fork the repository, create a branch, and submit a pu
 
 Hey there! I’m **DyMattic**, a DJ and software developer with a passion for music and tech. When I’m not rocking the VR rave scene, I’m crafting tools like **QualityQueue** to make life easier for fellow audiophiles and creators.
 
-Check out my mixes on [SoundCloud](https://soundcloud.com/dymatic-music), and catch me at the next VR rave! ✨
+Check out my mixes on [SoundCloud](https://soundcloud.com/dymattic-music), and catch me at the next VR rave! ✨
 
 ---
 
