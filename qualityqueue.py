@@ -21,8 +21,8 @@ def analyze_audio_content(file_path):
     """
     try:
         y, sr = librosa.load(file_path, sr=None)
-        dynamic_range = np.max(y) - np.min(y)
-        spectral_rolloff = librosa.feature.spectral_rolloff(y=y, sr=sr, roll_percent=0.90)[0].mean()
+        dynamic_range = float(np.max(y) - np.min(y))  # Convert to Python float
+        spectral_rolloff = float(librosa.feature.spectral_rolloff(y=y, sr=sr, roll_percent=0.90)[0].mean())  # Convert to Python float
         return dynamic_range, spectral_rolloff
     except Exception as e:
         print(f"Error analyzing audio for {file_path}: {e}")
@@ -40,8 +40,8 @@ def analyze_audio_content_gpu(file_path):
 
         audio, sr = sf.read(file_path)
         embedding, _ = openl3.get_audio_embedding(audio, sr, frontend="gpu")
-        dynamic_range = np.max(embedding) - np.min(embedding)
-        spectral_rolloff = np.mean(embedding)  # Placeholder metric
+        dynamic_range = float(np.max(embedding) - np.min(embedding))  # Convert to Python float
+        spectral_rolloff = float(np.mean(embedding))  # Placeholder metric, convert to Python float
         return dynamic_range, spectral_rolloff
     except Exception as e:
         print(f"Error analyzing audio (GPU) for {file_path}: {e}")
